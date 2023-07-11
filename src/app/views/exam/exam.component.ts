@@ -11,7 +11,7 @@ export class ExamComponent implements OnInit {
     window.speechSynthesis.getVoices()
   }
 
-  currentMenu: string = 'speaking';
+  currentMenu: string = 'quiz';
 
   
 
