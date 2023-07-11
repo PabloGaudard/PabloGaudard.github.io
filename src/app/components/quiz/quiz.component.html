@@ -1,7 +1,10 @@
 <ng-template ngFor let-item [ngForOf]="questions" let-i="index">
-    <div *ngIf="i > -1" (click)="speak(item.question)">
-        <!-- <h1>{{item.question}}</h1> -->
+    <div *ngIf="i > -1">
+        
+        <fa-icon [icon]="faVolumeHigh" (click)="speak(item.question)"></fa-icon>
+        
         <button>Yes</button>
         <button>No</button>
+        
     </div>
 </ng-template>

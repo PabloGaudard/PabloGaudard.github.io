@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 
+import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.scss']
 })
 export class QuizComponent {
+  
+  faVolumeHigh = faVolumeHigh;
 
   questions = [
     { question: 'Can we cut bread with the thick edge of a knife?', answer: 0 },
@@ -19,7 +23,7 @@ export class QuizComponent {
     { question: 'Does tea with sugar taste bitter?', answer: 0 },
     { question: 'Is it correct to say “The thief robbed my watch“?', answer: 0 },
     { question: 'Should we handle eggs gently?', answer: 1 },
-    
+
     { question: 'Do horses have paws?', answer: 0 },
   ];
 
