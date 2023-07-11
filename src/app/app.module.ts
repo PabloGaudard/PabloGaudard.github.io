@@ -11,6 +11,7 @@ import { GrammarComponent } from './components/grammar/grammar.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { DictationComponent } from './components/dictation/dictation.component';
 import { SpeakingComponent } from './components/speaking/speaking.component';
+import { MenubarComponent } from './components/menubar/menubar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SpeakingComponent } from './components/speaking/speaking.component';
     GrammarComponent,
     QuizComponent,
     DictationComponent,
-    SpeakingComponent
+    SpeakingComponent,
+    MenubarComponent
   ],
   imports: [
     BrowserModule,
