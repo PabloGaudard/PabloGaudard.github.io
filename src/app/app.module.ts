@@ -3,10 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ExamComponent } from './views/exam/exam.component';
+import { GrammarComponent } from './components/grammar/grammar.component';
+import { QuizComponent } from './components/quiz/quiz.component';
+import { DictationComponent } from './components/dictation/dictation.component';
+import { SpeakingComponent } from './components/speaking/speaking.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ExamComponent,
+    GrammarComponent,
+    QuizComponent,
+    DictationComponent,
+    SpeakingComponent
   ],
   imports: [
     BrowserModule,
