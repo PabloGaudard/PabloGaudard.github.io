@@ -135,6 +135,7 @@ export class SpeakingComponent implements OnInit {
     this.currentIndex++;
     this.speachText = "";
     this.videoPlayer = document.getElementsByTagName("video")[this.currentIndex];
+    this.timesHeard = 0;
   }
 
   answer(i: number, answered: any) {
