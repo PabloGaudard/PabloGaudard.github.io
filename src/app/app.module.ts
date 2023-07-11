@@ -13,6 +13,7 @@ import { DictationComponent } from './components/dictation/dictation.component';
 import { SpeakingComponent } from './components/speaking/speaking.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CountDownTimerComponent } from './components/count-down-timer/count-down-timer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HeaderComponent } from './components/header/header.component';
     DictationComponent,
     SpeakingComponent,
     MenubarComponent,
-    HeaderComponent
+    HeaderComponent,
+    CountDownTimerComponent
   ],
   imports: [
     BrowserModule,

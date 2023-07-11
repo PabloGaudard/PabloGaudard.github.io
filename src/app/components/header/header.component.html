@@ -1,1 +1,19 @@
-<p>header works!</p>
+<div id="header" class="px-10 py-7 flex flex-row justify-between items-center">
+
+    <div>
+        <h1 class="text-white text-3xl mb-2">Stage 9 Exam</h1>
+        <p>
+            <fa-icon [icon]="faClock"></fa-icon>
+            You have <app-count-down-timer></app-count-down-timer> left
+        </p>
+    </div>
+
+    <div class="flex flex-row items-center">
+        <fa-icon [icon]="faUser" class="bg-sky-500 text-white aspect-square w-11 flex justify-center items-center rounded-full mr-3"></fa-icon>
+        <div>
+            <p class="text-white">Alexandra Lima</p>
+            <p class="text-sm">USK Pouso Alegre</p>
+        </div>
+    </div>
+
+</div>
