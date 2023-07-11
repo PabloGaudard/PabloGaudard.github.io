@@ -41,7 +41,11 @@ export class QuizComponent {
     var voice = synth.getVoices().filter(_ => _.lang.indexOf('en-') > -1)[2];
 
     utter.voice = voice;
-    // utter.rate = 0.75;
+
+    if(this.questions[i].timesHeard == 2)
+        utter.rate = 0.60;
+
+
     synth.speak(utter)
 
 
