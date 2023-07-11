@@ -1,1 +1,7 @@
-<p>speaking works!</p>
+<div *ngFor="let number of [0,1,2,3,4]">
+
+    <p>{{speachText}}</p>
+
+    <fa-icon [icon]="faMicrophone" (click)="isUserSpeaking? stopRecording() : startRecording()"></fa-icon>
+
+</div>

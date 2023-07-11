@@ -1,7 +1,10 @@
 <ng-template ngFor let-item [ngForOf]="questions" let-i="index">
-    <div *ngIf="i == 0" (click)="speak()">
-        <h1>{{item.question}}</h1>
-        <button>Yes</button>
-        <button>No</button>
+    <div>
+        <p>
+            <span *ngFor="let word of item.question.split(' ')" (click)="speak(word)">{{word}} </span>
+        </p>
+        
+        <button (click)="speak(item.right)">{{item.right}}</button>
+        <button (click)="speak(item.wrong)">{{item.wrong}}</button>
     </div>
 </ng-template>

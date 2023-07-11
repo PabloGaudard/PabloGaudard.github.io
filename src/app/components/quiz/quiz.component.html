@@ -1,5 +1,5 @@
 <ng-template ngFor let-item [ngForOf]="questions" let-i="index">
-    <div *ngIf="i > -1">
+    <div>
         
         <fa-icon [icon]="faVolumeHigh" (click)="speak(item.question)"></fa-icon>
         

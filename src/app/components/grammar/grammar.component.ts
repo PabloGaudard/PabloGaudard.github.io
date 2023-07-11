@@ -8,22 +8,28 @@ import { Component } from '@angular/core';
 export class GrammarComponent {
 
   questions = [
-    { question: 'Can we cut bread with the thick edge of a knife?', answer: 0 },
-    { question: 'Can we say “usefuller“ when forming the comparative of “useful“?', answer: 0 },
-    { question: 'By the “background“ of a picture, do we mean its main subject?', answer: 0 },
-    { question: 'Do dogs bury bones?', answer: 1 },
-    { question: 'Do ten pence make a pound?', answer: 0 },
-    { question: 'Is the word “sadder“ spelt with two Ds?', answer: 1 },
-    { question: 'Does tea with sugar taste bitter?', answer: 0 },
-    { question: 'Is it correct to say “The thief robbed my watch“?', answer: 0 },
-    { question: 'Should we handle eggs gently?', answer: 1 },
-    { question: 'Do horses have paws?', answer: 0 },
-  ];
+    { question: "___ average, Tim drinks three cups of tea a day.", right: "On", wrong: "In" },
+    { question: "It’s ___  likely that Sam will be the last to get here; he usually is!", right: "highly", wrong: "hardly" },
+    { question: "Why do I have to go to bed so early? I’m not tired ___ all.", right: "at", wrong: "in" },
 
-  speak() {
+    { question: "I’m not sure Jack’s very eager ___  Claudia this evening!", right: "to see", wrong: "on seeing" },
+    { question: "Ken is a very ___ man; he seems to love danger.", right: "incovenient", wrong: "daring" },
+    { question: "For heavens’ ___ stop whistling, it’s driving me round the bend!", right: "sake", wrong: "fake" },
+
+    { question: "I miss ___ to the beach every weekend; it used to be great fun.", right: "going", wrong: "to go" },
+    { question: "I’m not afraid ___ your dog, I’m only shaking because it’s cold.", right: "of", wrong: "from" },
+    { question: "She ___ me to go there again.", right: "forbade", wrong: "prevented" },
+    { question: "I usually ___ asleep about ten minutes after turning off the lights.", right: "fall", wrong: "go" }
+  ]
+
+
+  speak(speech: string) {
+
+    speech = speech.replaceAll("_", "");
+  
     var synth = window.speechSynthesis;
 
-    var utter = new SpeechSynthesisUtterance(this.questions[0].question)
+    var utter = new SpeechSynthesisUtterance(speech)
 
     var voice = synth.getVoices().filter(_ => _.lang.indexOf('en-') > -1)[2];
 
