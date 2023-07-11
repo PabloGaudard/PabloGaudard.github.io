@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
+import { faVolumeHigh, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-quiz',
@@ -10,6 +10,7 @@ import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 export class QuizComponent {
   
   faVolumeHigh = faVolumeHigh;
+  faArrowRight = faArrowRight;
 
   questions = [
     { question: 'Can we cut bread with the thick edge of a knife?', answer: 0 },
