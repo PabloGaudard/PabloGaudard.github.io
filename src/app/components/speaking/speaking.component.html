@@ -18,31 +18,52 @@
                 [ngClass]="{'cursor-pointer': item.timesHeard != 2}"></fa-icon>
 
             -->
-                
-                <video  class="mr-2" width="300px">
-                    <source src="../../../assets/speaking-1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                
-                <div class="grid grid-flow-col gap-3 ">
-                    <fa-icon [icon]="faHeart"
-                        [ngClass]="{'text-red-600': item.timesHeard == null || item.timesHeard == 1}"></fa-icon>
-                    <fa-icon [icon]="faHeart" [ngClass]="{'text-red-600': item.timesHeard == null}"></fa-icon>
+
+            <div class="flex flex-row">
+                <div class="relative" id="video-container">
+
+                    <video width="330px" (click)="toggleVideo()">
+                        <source src="../../../assets/speaking-{{i+1}}.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <div class="flex flex-row w-full justify-center pt-1">
+                        <fa-icon [icon]="faHeart" [ngClass]="{'text-red-600': timesHeard <= 1}" class="mr-2"></fa-icon>
+                        <fa-icon [icon]="faHeart" [ngClass]="{'text-red-600': timesHeard == 0}" class="ml-2"></fa-icon>
+                    </div>
+
+                    <fa-icon [icon]="faPlay" class="play-btn absolute top-1/2 -mt-5 left-1/2 -ml-2 text-4xl" ></fa-icon>
+
+
                 </div>
-    
 
-            <fa-icon [icon]="faMicrophone" (click)="isUserSpeaking? stopRecording() : startRecording()"></fa-icon>
-            <p>{{speachText}}</p>
+                <div id="transcription" style="height: 225px; width: 300px;" class="flex items-center flex-col justify-center">
 
+                    <fa-icon [icon]="faMicrophone" (click)="isUserSpeaking? stopRecording() : startRecording()" 
+                    class="cursor-pointer text-5xl mb-4 bg-sky-600 aspect-square flex justify-center items-center p-4 rounded-full"
+                    [ngClass]="isUserSpeaking?'recording':''"></fa-icon>
+
+                    <p *ngIf="!speachText">Click to record</p>
+
+                    <p>{{speachText}}</p>
+
+                    
+                    <div class="options mt-3">
+
+                        <button class="w-full mt-2" (click)="continue()" *ngIf="speachText">
+                            <span>Continue</span> <fa-icon [icon]="faArrowRight" class="ml-3"></fa-icon>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
             <!-- <div class="options mt-10">
                 <div class="mb-4">
                     <button [ngClass]="{'active': item.answered === 1}" (click)="answer(i, 1)" class="mr-4">Yes</button>
                     <button [ngClass]="{'active': item.answered === 0}" (click)="answer(i, 0)">No</button>
                 </div>
             -->
-            <button class="w-full" (click)="continue()" *ngIf="true">
-                <span>Continue</span> <fa-icon [icon]="faArrowRight" class="ml-3"></fa-icon>
-            </button>
             <!-- </div>  -->
 
         </div>
