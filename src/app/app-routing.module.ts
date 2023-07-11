@@ -4,7 +4,7 @@ import { ExamComponent } from './views/exam/exam.component';
 
 
 const routes: Routes = [
-  { path: 'exam', component: ExamComponent }
+  { path: '', component: ExamComponent }
 ];
 
 @NgModule({
