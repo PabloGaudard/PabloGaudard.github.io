@@ -1,0 +1,40 @@
+#menubar {
+
+    border-right: 15px solid #1c395a;
+    height: 100vh;
+
+    ul {
+        width: 100%;
+    }
+
+    li {
+        margin-left: 30px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+        display: flex;
+        align-items: center;
+
+        fa-icon {
+            border-radius: 15px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            color: #0679fc
+        }
+        
+        &.active {
+            
+            background-color: #1c395a;
+            
+            fa-icon {
+                color: #fff;    
+                background-color: #0679fc;
+            }
+        }
+    }
+}

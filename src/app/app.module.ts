@@ -12,6 +12,7 @@ import { QuizComponent } from './components/quiz/quiz.component';
 import { DictationComponent } from './components/dictation/dictation.component';
 import { SpeakingComponent } from './components/speaking/speaking.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MenubarComponent } from './components/menubar/menubar.component';
     QuizComponent,
     DictationComponent,
     SpeakingComponent,
-    MenubarComponent
+    MenubarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
