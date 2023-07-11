@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   template: `<span>{{ minutes }}m:{{ seconds | number: '2.0' }}s</span>`
 })
 export class CountDownTimerComponent {
-  minutes: number = 60;
+  minutes: number = 30;
   seconds: number = 0;
   interval: any;
 

@@ -1,17 +1,24 @@
 <div class="carousel">
 
+    <app-progressbar [array]="questions" class="w-full" [currentIndex]="currentIndex"></app-progressbar>
+
     <ng-template ngFor let-item [ngForOf]="questions" let-i="index">
-        <div class="flex flex-col items-center pt-28 slide" [ngClass]="{'active': i === currentIndex}">
+        <div class="flex flex-col items-center pt-32 slide"
+            [ngClass]="{'active': i === currentIndex, 'previous': i < currentIndex}">
 
-            <fa-icon [icon]="faVolumeHigh" (click)="speak(item.question)"
-                class="cursor-pointer text-5xl mb-10"></fa-icon>
+            <fa-icon [icon]="faVolumeHigh" (click)="item.timesHeard != 2 ? speak(i) : 0" class="text-6xl mb-3" [ngClass]="{'cursor-pointer': item.timesHeard != 2}"></fa-icon>
 
-            <div class="options">
+            <div class="grid grid-flow-col gap-3 ">
+                <fa-icon [icon]="faHeart" [ngClass]="{'text-red-600': item.timesHeard == null || item.timesHeard == 1}"></fa-icon>
+                <fa-icon [icon]="faHeart" [ngClass]="{'text-red-600': item.timesHeard == null}"></fa-icon>
+            </div>
+
+            <div class="options mt-10">
                 <div class="mb-4">
-                    <button class="mr-4">Yes</button>
-                    <button>No</button>
+                    <button [ngClass]="{'active': item.answered === 1}" (click)="answer(i, 1)" class="mr-4">Yes</button>
+                    <button [ngClass]="{'active': item.answered === 0}" (click)="answer(i, 0)">No</button>
                 </div>
-                <button class="w-full" (click)="continue()">
+                <button class="w-full" (click)="continue()" *ngIf="item.answered === 1 || item.answered === 0">
                     <span>Continue</span> <fa-icon [icon]="faArrowRight" class="ml-3"></fa-icon>
                 </button>
             </div>

@@ -1,6 +1,13 @@
-<video controls>
-    <source src="../../../assets/dictation.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<div class="flex flex-col justify-center m-10">
 
-<textarea></textarea>
+    <h1 class="text-2xl mb-5">Play the video below to do the dictation</h1>
+    <div class="flex flex-row w-full">
+     
+        <video controls class="mr-2" width="45%">
+            <source src="../../../assets/dictation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <textarea class="text-black p-5 ml-2 w-full" cols="50" placeholder="Type what you hear from the video"></textarea>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<div id="progressbar" class="w-full grid grid-flow-col gap-2 p-2">
+    <ng-template ngFor let-item [ngForOf]="array" let-i="index">
+        <div class="h-2 rounded-sm" [ngClass]="i < currentIndex ? 'bg-green-600' : 'bg-blue-950'"></div>
+    </ng-template>
+</div>

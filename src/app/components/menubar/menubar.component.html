@@ -3,10 +3,10 @@
     <img src="../../../assets/logo.png" alt="" class="w-1/2 mt-8 mb-16" style="filter: contrast(0) brightness(1.75);">
 
     <ul>
-        <li class="active"><fa-icon [icon]="faQuestionCircle"></fa-icon> Quiz</li>
-        <li><fa-icon [icon]="faBook"></fa-icon> Grammar</li>
-        <li><fa-icon [icon]="faEdit"></fa-icon> Dictation</li>
-        <li><fa-icon [icon]="faMicrophone"></fa-icon> Speaking</li>
+        <li (click)="changeMenu('quiz')" [ngClass]="{active: currentMenu == 'quiz'}"><fa-icon [icon]="faQuestionCircle"></fa-icon> Quiz</li>
+        <li (click)="changeMenu('grammar')" [ngClass]="{active: currentMenu == 'grammar'}"><fa-icon [icon]="faBook"></fa-icon> Grammar</li>
+        <li (click)="changeMenu('dictation')" [ngClass]="{active: currentMenu == 'dictation'}"><fa-icon [icon]="faEdit"></fa-icon> Dictation</li>
+        <li (click)="changeMenu('speaking')" [ngClass]="{active: currentMenu == 'speaking'}"><fa-icon [icon]="faMicrophone"></fa-icon> Speaking</li>
     </ul>
 
 </div>

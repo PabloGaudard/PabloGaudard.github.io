@@ -1,0 +1,43 @@
+.options {
+    button {
+        padding: 10px 50px;
+        border: 4px solid #1c395a;
+        border-radius: 999px;
+        font-weight: bold;
+        &.active{
+            background-color: #0679fc;
+        }
+    }
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 500px
+        /* Adjust the height as needed */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(100%);
+    /* Initial slide position */
+    transition: transform 0.5s ease-in-out;
+
+    &.previous {
+        transform: translateX(-100%);
+
+    }
+}
+
+.active {
+    transform: translateX(0);
+}
+
+//   button {
+//     margin-top: 10px;
+//   }
