@@ -1,0 +1,24 @@
+.carousel {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 400px /* Adjust the height as needed */
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(-100%); /* Initial slide position */
+  transition: transform 0.3s ease-in-out;
+}
+
+.active {
+  transform: translateX(0);
+}
+
+button {
+  margin-top: 10px;
+}

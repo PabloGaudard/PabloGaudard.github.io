@@ -1,17 +1,22 @@
-<ng-template ngFor let-item [ngForOf]="questions" let-i="index">
-    <div class="flex flex-col items-center pt-28" *ngIf="i == 0">
-        
-        <fa-icon [icon]="faVolumeHigh" (click)="speak(item.question)" class="cursor-pointer text-5xl mb-10"></fa-icon>
-        
-        <div class="options">
-            <div class="mb-4">
-                <button class="mr-4">Yes</button>
-                <button>No</button>
+<div class="carousel">
+
+    <ng-template ngFor let-item [ngForOf]="questions" let-i="index">
+        <div class="flex flex-col items-center pt-28 slide" [ngClass]="{'active': i === currentIndex}">
+
+            <fa-icon [icon]="faVolumeHigh" (click)="speak(item.question)"
+                class="cursor-pointer text-5xl mb-10"></fa-icon>
+
+            <div class="options">
+                <div class="mb-4">
+                    <button class="mr-4">Yes</button>
+                    <button>No</button>
+                </div>
+                <button class="w-full" (click)="continue()">
+                    <span>Continue</span> <fa-icon [icon]="faArrowRight" class="ml-3"></fa-icon>
+                </button>
             </div>
-            <button class="w-full">
-                <span>Continue</span> <fa-icon [icon]="faArrowRight" class="ml-3"></fa-icon>
-            </button>
+
         </div>
-        
-    </div>
-</ng-template>
+    </ng-template>
+
+</div>

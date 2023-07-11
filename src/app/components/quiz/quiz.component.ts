@@ -12,6 +12,8 @@ export class QuizComponent {
   faVolumeHigh = faVolumeHigh;
   faArrowRight = faArrowRight;
 
+  currentIndex = 0;
+
   questions = [
     { question: 'Can we cut bread with the thick edge of a knife?', answer: 0 },
     { question: 'Can we say “usefuller“ when forming the comparative of “useful“?', answer: 0 },
@@ -40,6 +42,10 @@ export class QuizComponent {
     synth.speak(utter)
 
 
+  }
+
+  continue(){
+    this.currentIndex++;
   }
 
 }

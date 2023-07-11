@@ -14,6 +14,7 @@ import { SpeakingComponent } from './components/speaking/speaking.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CountDownTimerComponent } from './components/count-down-timer/count-down-timer.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CountDownTimerComponent } from './components/count-down-timer/count-dow
     SpeakingComponent,
     MenubarComponent,
     HeaderComponent,
-    CountDownTimerComponent
+    CountDownTimerComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
