@@ -1,0 +1,12 @@
+.options {
+    button {
+        padding: 10px 50px;
+        border: 4px solid #1c395a;
+        border-radius: 999px;
+        font-weight: bold;
+
+        &.active {
+            background-color: #0679fc;
+        }
+    }
+}

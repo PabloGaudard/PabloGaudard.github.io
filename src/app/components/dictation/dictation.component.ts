@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-dictation',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./dictation.component.scss']
 })
 export class DictationComponent {
+
+  faArrowRight = faArrowRight;
+
+  @Output() onFinished = new EventEmitter();
+
+  finish() {
+    this.onFinished.emit();
+  }
 
 }

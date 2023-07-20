@@ -35,6 +35,20 @@
         </div>
     </ng-template>
 
+    <div class="flex flex-col items-center pt-32 slide"
+        [ngClass]="{'active':  questions.length === currentIndex, 'previous': questions.length < currentIndex}">
+        <h1 class="text-3xl">
+            You have completed the quiz!
+        </h1>
+        <br>
+        <div class="options">
+            <button class="w-full" (click)="finish()">
+                <span>Continue to Dictation</span> <fa-icon [icon]="faArrowRight" class="ml-3"></fa-icon>
+            </button>
+        </div>
+    </div>
+
+
 </div>
 <!-- 
 <ng-template ngFor let-item [ngForOf]="questions" let-i="index">

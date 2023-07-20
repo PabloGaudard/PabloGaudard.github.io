@@ -1,17 +1,18 @@
 <div id="exam" class="flex flex-row">
-    <app-menubar (switchTab)="currentMenu = $event"></app-menubar>
+    <app-menubar (switchTab)="currentMenu = $event" [currentMenu]="currentMenu"></app-menubar>
     
     <div class="h-screen overflow-auto w-full">
 
         <app-header></app-header>
 
-        <app-quiz *ngIf="currentMenu == 'quiz'"></app-quiz>
+        <app-quiz [hidden]="currentMenu != 'quiz'" (onQuizFinished)="currentMenu = 'grammar'"></app-quiz>
         
-        <app-grammar *ngIf="currentMenu == 'grammar'"></app-grammar>
+        <app-grammar [hidden]="currentMenu != 'grammar'" (onGrammarFinished)="currentMenu = 'dictation'"></app-grammar>
         
-        <app-speaking *ngIf="currentMenu == 'speaking'"></app-speaking>
+        <app-dictation [hidden]="currentMenu != 'dictation'" (onFinished)="currentMenu = 'speaking'"></app-dictation>
+
+        <app-speaking [hidden]="currentMenu != 'speaking'"></app-speaking>
         
-        <app-dictation *ngIf="currentMenu == 'dictation'"></app-dictation>
 
     </div>
 </div>

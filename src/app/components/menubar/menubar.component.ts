@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 import { faQuestionCircle, faEdit, faMicrophone, faBook } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,7 +15,7 @@ export class MenubarComponent {
   faBook = faBook;
  
   @Output() switchTab = new EventEmitter<any>();
-  currentMenu = 'quiz';
+  @Input() currentMenu = '';
 
   changeMenu(menu: string) {
     this.currentMenu = menu;

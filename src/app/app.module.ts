@@ -15,6 +15,7 @@ import { MenubarComponent } from './components/menubar/menubar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CountDownTimerComponent } from './components/count-down-timer/count-down-timer.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
+import { MessageComponent } from './components/message/message.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProgressbarComponent } from './components/progressbar/progressbar.compo
     MenubarComponent,
     HeaderComponent,
     CountDownTimerComponent,
-    ProgressbarComponent
+    ProgressbarComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
