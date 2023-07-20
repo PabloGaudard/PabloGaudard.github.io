@@ -23,8 +23,8 @@
                     <button [ngClass]="{'active': item.answered === 0}" (click)="answer(i, 0)">No</button>
  -->
                     
-                    <button (click)="answer(i, item.right); speak(item.right)" [ngClass]="{'active': item.answered === item.right}"  class="mr-4">{{item.right}}</button>
-                    <button (click)="answer(i, item.wrong); speak(item.wrong)" [ngClass]="{'active': item.answered === item.wrong}">{{item.wrong}}</button>
+                    <button (click)="answer(i, item.options[0]); speak(item.options[0])" [ngClass]="{'active': item.answered === item.options[0]}"  class="mr-4">{{item.options[0]}}</button>
+                    <button (click)="answer(i, item.options[1]); speak(item.options[1])" [ngClass]="{'active': item.answered === item.options[1]}">{{item.options[1]}}</button>
 
                 </div>
                 <button class="w-full" (click)="continue()" *ngIf="item.answered">
@@ -43,7 +43,7 @@
             <span *ngFor="let word of item.question.split(' ')" (click)="speak(word)">{{word}} </span>
         </p>
         
-        <button (click)="speak(item.right)">{{item.right}}</button>
-        <button (click)="speak(item.wrong)">{{item.wrong}}</button>
+        <button (click)="speak(item.options[0])">{{item.options[0]}}</button>
+        <button (click)="speak(item.options[1])">{{item.options[1]}}</button>
     </div>
 </ng-template> -->

@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   template: `<span>{{ minutes }}m:{{ seconds | number: '2.0' }}s</span>`
 })
 export class CountDownTimerComponent {
-  minutes: number = 30;
-  seconds: number = 0;
+  minutes: number = 59;
+  seconds: number = 59;
   interval: any;
 
   ngOnInit(): void {
