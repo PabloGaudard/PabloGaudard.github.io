@@ -27,7 +27,7 @@ export class SpeakingComponent implements OnInit {
 
   @ViewChild('videoPlayer')
   set mainVideoEl(el: ElementRef) {
-    this.videoPlayer = document.getElementsByTagName("video")[0];
+    this.videoPlayer = document.getElementsByTagName("video")[1];
   }
 
   toggleVideo() {
