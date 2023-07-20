@@ -65,7 +65,7 @@ export class SpeakingComponent implements OnInit {
 
     this.currentIndex++;
     this.speachText = "";
-    this.videoPlayer = document.getElementsByTagName("video")[this.currentIndex];
+    this.videoPlayer = document.getElementsByTagName("video")[this.currentIndex+1];
     this.timesHeard = 0;
   }
 
