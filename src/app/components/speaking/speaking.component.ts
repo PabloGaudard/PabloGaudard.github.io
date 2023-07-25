@@ -31,9 +31,10 @@ export class SpeakingComponent implements OnInit {
   }
 
   toggleVideo() {
-    if (this.timesHeard < 2) {
-      this.videoPlayer?.play();
-      this.timesHeard++
+    if (this.timesHeard <= 2 && this.videoPlayer) {
+      this.videoPlayer.playbackRate = 1 - this.timesHeard * 0.25;
+      this.videoPlayer.play();
+      this.timesHeard++;
     }
   }
 

@@ -28,8 +28,9 @@
                     </video>
 
                     <div class="flex flex-row w-full justify-center pt-1">
+                        <fa-icon [icon]="faHeart" [ngClass]="{'text-red-600': timesHeard <= 2}" class="mr-2"></fa-icon>
                         <fa-icon [icon]="faHeart" [ngClass]="{'text-red-600': timesHeard <= 1}" class="mr-2"></fa-icon>
-                        <fa-icon [icon]="faHeart" [ngClass]="{'text-red-600': timesHeard == 0}" class="ml-2"></fa-icon>
+                        <fa-icon [icon]="faHeart" [ngClass]="{'text-red-600': timesHeard == 0}"></fa-icon>
                     </div>
 
                     <fa-icon [icon]="faPlay" class="play-btn absolute top-1/2 -mt-5 left-1/2 -ml-2 text-4xl"></fa-icon>
