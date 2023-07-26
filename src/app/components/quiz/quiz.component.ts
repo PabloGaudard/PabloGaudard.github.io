@@ -67,15 +67,15 @@ export class QuizComponent {
 
     this.questions[i].timesHeard = (this.questions[i].timesHeard ?? 0) + 1;
 
-    var voice = synth.getVoices().filter(_ => _.lang.indexOf('en-') > -1)[2];
+    var voice = synth.getVoices().filter(_ => _.lang.indexOf('en-GB') > -1)[0];
 
     utter.voice = voice;
 
     if (this.questions[i].timesHeard == 2)
-      utter.rate = 0.75;
+      utter.rate = 0.70;
 
     if (this.questions[i].timesHeard == 3)
-      utter.rate = 0.5;
+      utter.rate = 0.6;
 
 
     synth.speak(utter)
